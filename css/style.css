@@ -796,6 +796,220 @@ header nav .form i{
     width: 90%;
 }
 
-
-
 /* END   SKILLS  */
+.quote{
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background: url(../images/quote.jpg);
+    background-size: cover;
+    position: relative;
+    text-align: center;
+
+}
+.quote::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0,0 ,0 ,.8);
+    left: 0;
+    top: 0;
+}
+.quote .text{
+    position: relative;
+    z-index: 2;
+    top: 50%;
+    color: white;
+}
+
+.quote q{
+    font-size: 30px;
+    display: block;
+}
+.quote .container .text q::before{
+    content: "\f10d";
+    font-family: "Font Awesome 5 Pro"
+}
+.quote .container .text q::after{
+    content: "\f10e";
+    font-family: "Font Awesome 5 Pro"
+}
+.quote span{
+    display: block;
+    margin-top:20px;
+    font-size: 20px;
+    font-style: italic;
+}
+
+/* START PRICING  */
+.pricing{
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+.pricing .plans{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px , 1fr));
+    gap: 30px;
+}
+.pricing .plans .plan{
+    background-color: #fcfcfc;
+    text-align: center;
+}
+.pricing .plans .plan .heading{
+    padding: 40px;
+    border: 1px solid var(--main-color) ;
+    border-color: var(--main-color) transparent;
+}
+.pricing .plans .plan .heading h3{
+    margin: 0 0 30px ;
+    text-transform: uppercase;
+    font-weight: normal; 
+
+}
+.pricing .plans .plan .heading h1{
+    margin: 0;
+    font-size: 60px;
+    font-weight: bold;
+}
+.pricing .plans .plan .heading h1::before{
+    content: "$";
+    position: relative;
+    font-size: 25px;
+    top: -40px;
+    margin-right: 15px;
+    font-weight: normal;
+}
+.pricing .plans .plan .heading h1::after{
+    content: "/Mo";
+    position: relative;
+    font-size: 25px;
+    margin-left: 15px;
+}
+.pricing .plans .plan ul{
+    border-bottom: 1px solid var(--main-color);
+}
+.pricing .plans .plan ul li{
+    padding: 20px;
+    position: relative;
+}
+.pricing .plans .plan ul li:not(:last-child)::after{
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 60%;
+    background-color: var(--main-color);
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+.pricing .plans .plan a{
+    text-decoration: none;
+    border: 1px solid var(--main-color);
+    display: block;
+    padding: 10px;
+    margin: 15px 0;
+    color: #222;
+}
+.pricing .plans .plan a:hover{
+    background-color: var(--main-color);
+    color: white;
+}
+.pricing .contact{
+    text-align: center;
+
+}
+.pricing .container > a{
+    display: block;
+    text-align: center;
+    width: 150px;
+    background: var(--main-color);
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin: 20px auto ;
+}
+/* END PRICING  */
+/* START SUBSCRIBE  */
+.subscribe{
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-image: url(../images/subscribe.jpg);
+    background-size: cover;
+    position: relative;
+
+}
+.subscribe::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0 ;
+    left: 0;
+    background-color: rgba(0, 0, 0, .5);
+}
+.subscribe .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+@media(max-width: 991px){
+    .subscribe .container{
+        flex-direction: column;
+    }
+}
+.subscribe .container form{
+    padding: 0 ;
+    display: flex;
+    width: 500px;
+    position: relative;
+    max-width: 100%;
+}
+.subscribe .container form i{
+    color: white;
+    font-size: 25px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
+}
+.subscribe .container form input[type="email"]{
+    background: transparent;
+    border: 1px solid white;
+    border-right: none;
+    color: white;
+    padding: 20px 20px 20px 60px;
+    caret-color: var(--main-color);
+    width: calc(100% - 130px);
+    outline: none;
+}
+.subscribe form ::placeholder{
+    color: white;
+}
+.subscribe .container form input[type="submit"]{
+    padding:10px 20px;
+    text-transform: uppercase;
+    font-weight: normal;
+    background-color: var(--main-color);
+    color: white;
+    border: 1px solid white;
+    border-left: none;
+    outline: none;
+    margin: 0;
+    width: 130px;
+}
+
+.subscribe .container form + p{
+    color: white;
+    font-weight: normal;
+}
+@media(max-width: 991px){
+    .subscribe p{
+        margin: 20px 0 0;
+    }
+}
+
+/* END   SUBSCRIBE  */
